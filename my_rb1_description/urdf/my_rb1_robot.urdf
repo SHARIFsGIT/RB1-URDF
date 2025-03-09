@@ -206,7 +206,7 @@
 
   <!-- Gazebo-specific properties -->
   <gazebo reference="base_link">
-    <material>Gazebo/Blue</material>
+    <material>Gazebo/Black</material>
   </gazebo>
 
   <gazebo reference="right_wheel">

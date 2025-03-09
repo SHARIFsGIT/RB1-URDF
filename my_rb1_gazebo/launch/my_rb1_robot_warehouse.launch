@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Launch the empty warehouse world -->
+  <include file="$(find rb1_base_gazebo)/launch/empty_warehouse.launch"/>
+
+  <!-- Load the URDF model into the parameter server -->
+  <param name="robot_description" textfile="$(find my_rb1_description)/urdf/my_rb1_robot.urdf" />
+
+  <!-- Spawn the robot model in Gazebo -->
+  <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" 
+        args="-urdf -param robot_description -model my_rb1_robot -x -0.30 -y -1.35 -z 0.15" 
+        output="screen"/>
+
+  <!-- Start robot state publisher -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <!-- Start joint state publisher -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+</launch>
