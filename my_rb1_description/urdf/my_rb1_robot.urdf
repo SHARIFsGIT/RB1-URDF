@@ -257,7 +257,11 @@
       <rightJoint>right_wheel_joint</rightJoint>
       <wheelSeparation>0.4</wheelSeparation>
       <wheelDiameter>0.05</wheelDiameter>
+<<<<<<< HEAD
       <torque>20</torque>
+=======
+      <torque>5</torque>
+>>>>>>> 8ab4c95... Task 3: Add sensor plugins for differential drive and laser scanner
       <commandTopic>/cmd_vel</commandTopic>
       <odometryTopic>/odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
